@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LX PANTOS Contact Point</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+    body { background: #f5f5f5; }
+    .header { background: #b5121b; color: white; text-align: center; padding: 50px 20px; }
+    .header h1 { font-size: 42px; margin: 10px 0; }
+    .header h3 { letter-spacing: 3px; }
+    .container { max-width: 1200px; margin: 30px auto; padding: 0 20px; }
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr)); gap: 20px; }
+    .card { background: white; border-radius: 15px; padding: 25px; box-shadow: 0 3px 10px rgba(0,0,0,0.1); }
+    .badge { display: inline-block; background: #ffe8e8; color: #b5121b; padding: 8px 14px; border-radius: 20px; font-weight: bold; margin-bottom: 15px; }
+    .title { color: #b5121b; font-size: 26px; margin-bottom: 20px; }
+    .info { line-height: 2; overflow-wrap: anywhere; }
+    .email { color: #c01818; }
+
+    .section-heading { margin-bottom: 24px; }
+    .section-heading h2 { font-size: 24px; color: #252525; margin-bottom: 8px; }
+    .section-heading p { color: #666; line-height: 1.7; }
+    .card { display: flex; flex-direction: column; }
+    .badge { align-self: flex-start; }
+    .title { margin-bottom: 12px; }
+    .description { color: #666; line-height: 1.7; margin-bottom: 22px; }
+    .info { margin-bottom: 24px; }
+    .contact-button { display: block; margin-top: auto; padding: 13px 16px; border-radius: 9px; background: #b5121b; color: #fff; text-align: center; text-decoration: none; font-weight: 600; }
+    .contact-button:hover { background: #940e16; }
+    .contact-button:focus-visible { outline: 3px solid #b5121b; outline-offset: 4px; }
+    .inquiry-guide { margin-top: 28px; padding: 26px; background: #fff; border: 1px solid #eadcdd; border-left: 4px solid #b5121b; border-radius: 12px; }
+    .inquiry-guide h2 { font-size: 19px; color: #333; margin-bottom: 10px; }
+    .inquiry-guide p { color: #555; line-height: 1.8; }
+    .inquiry-items { display: flex; flex-wrap: wrap; gap: 9px; list-style: none; margin: 16px 0; }
+    .inquiry-items li { padding: 8px 12px; background: #f7f3f3; border-radius: 7px; color: #5d4244; font-size: 14px; }
+    .inquiry-guide .mail-note { font-size: 13px; color: #666; margin-top: 14px; }
+    @media (max-width: 480px) { .header { padding: 36px 20px; } .header h1 { font-size: 34px; } .card, .inquiry-guide { padding: 22px; } }
+    button.contact-button { width: 100%; border: 0; font: inherit; font-weight: 600; cursor: pointer; }
+    .copy-status { margin-top: 16px; color: #555; line-height: 1.7; }
+    .copy-fallback { margin-top: 12px; padding: 16px; background: #fff; border: 1px solid #ddd; border-radius: 8px; }
+    .copy-fallback label { display: block; margin-bottom: 8px; }
+    .copy-fallback input { width: 100%; padding: 10px; font: inherit; border: 1px solid #999; border-radius: 5px; }
+    [hidden] { display: none !important; }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <h3>LX PANTOS</h3>
+    <h1>Contact Point</h1>
+    <p>글로벌 물류 서비스별 담당자 안내</p>
+  </header>
+  <main class="container">
+    <section class="section-heading" aria-labelledby="contacts-heading">
+      <h2 id="contacts-heading">서비스별 담당자 안내</h2>
+      <p>문의하실 서비스의 담당자를 확인해 주세요.</p>
+    </section>
+    <div class="cards" id="cards">
+      <article class="card">
+        <div class="badge">① 해외 창고/운송 영업 (국내/해외)</div>
+        <h2 class="title">Global Warehouse Service</h2>
+        <p class="description">해외 창고 및 운송 서비스 문의</p>
+        <div class="info">
+          담당자 : 한희원 책임<br>
+          Email : <span class="email">heewon.han@lxpantos.com</span><br>
+          Phone : 02-6901-1170
+        </div>
+        <button type="button" class="contact-button" data-email="heewon.han@lxpantos.com" aria-label="heewon.han@lxpantos.com 주소 복사">주소 복사</button>
+      </article>
+      <article class="card">
+        <div class="badge">② 창고 물류 영업 (국내/해외)</div>
+        <h2 class="title">Fulfillment Service</h2>
+        <p class="description">국내·해외 창고 물류 서비스 문의</p>
+        <div class="info">
+          담당자 : 김영재 팀장<br>
+          Email : <span class="email">yeongjae.kim@lxpantos.com</span><br>
+          Phone : 02-3771-2054
+        </div>
+        <button type="button" class="contact-button" data-email="yeongjae.kim@lxpantos.com" aria-label="yeongjae.kim@lxpantos.com 주소 복사">주소 복사</button>
+      </article>
+      <article class="card">
+        <div class="badge">③ 특송 물류 영업(B2C)</div>
+        <h2 class="title">Express</h2>
+        <p class="description">B2C 특송 물류 서비스 문의</p>
+        <div class="info">
+          담당자 : 공세덕 책임<br>
+          Email : <span class="email">seaduck.gong@lxpantos.com</span><br>
+          Phone : 02-3771-2138
+        </div>
+        <button type="button" class="contact-button" data-email="seaduck.gong@lxpantos.com" aria-label="seaduck.gong@lxpantos.com 주소 복사">주소 복사</button>
+      </article>
+    </div>
+    <aside class="inquiry-guide" aria-labelledby="inquiry-heading">
+      <h2 id="inquiry-heading">문의 시 함께 알려주세요</h2>
+      <p>아래 정보를 함께 전달해 주시면 상담에 도움이 됩니다.</p>
+      <ul class="inquiry-items">
+        <li>이용 희망 서비스</li>
+        <li>출발·도착 국가 및 지역</li>
+        <li>예상 물동량</li>
+        <li>서비스 개시 희망 시점</li>
+      </ul>
+      <p class="mail-note">주소 복사 버튼을 누르면 해당 담당자의 이메일 주소가 복사됩니다.</p>
+    </aside>
+    <p id="copy-status" class="copy-status" role="status" aria-live="polite"></p>
+    <div id="copy-fallback" class="copy-fallback" hidden>
+      <label for="copy-address">자동 복사가 차단되었습니다. 아래 주소를 선택해 직접 복사해 주세요.</label>
+      <input id="copy-address" type="text" readonly>
+    </div>
+  </main>
+  <script>
+    (function () {
+      const status = document.getElementById('copy-status');
+      const fallback = document.getElementById('copy-fallback');
+      const address = document.getElementById('copy-address');
+      let busy = false;
+      function legacyCopy(value) {
+        const field = document.createElement('textarea');
+        field.value = value;
+        field.setAttribute('readonly', '');
+        field.style.position = 'absolute';
+        field.style.left = '-9999px';
+        document.body.appendChild(field);
+        let success = false;
+        try {
+          field.select();
+          field.setSelectionRange(0, field.value.length);
+          success = document.execCommand('copy');
+        } catch (error) { success = false; }
+        finally { field.remove(); }
+        return success;
+      }
+      document.querySelectorAll('button[data-email]').forEach(function (button) {
+        button.addEventListener('click', async function () {
+          if (busy) return;
+          busy = true;
+          const email = button.dataset.email;
+          let copied = false;
+          fallback.hidden = true;
+          status.textContent = '';
+          try {
+            if (navigator.clipboard && window.isSecureContext) {
+              await navigator.clipboard.writeText(email);
+              copied = true;
+            }
+          } catch (error) { copied = false; }
+          if (!copied) copied = legacyCopy(email);
+          if (copied) {
+            document.querySelectorAll('button[data-email]').forEach(function (item) {
+              item.textContent = '주소 복사';
+            });
+            button.textContent = '복사 완료!';
+            status.textContent = email + ' 주소가 복사되었습니다.';
+            button.focus();
+          } else {
+            fallback.hidden = false;
+            address.value = email;
+            address.focus();
+            address.select();
+            status.textContent = '브라우저에서 자동 복사를 허용하지 않습니다. 주소를 직접 복사해 주세요.';
+          }
+          busy = false;
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
