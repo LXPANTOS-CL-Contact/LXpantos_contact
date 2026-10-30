@@ -5,6 +5,59 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>LX PANTOS Contact Point</title>
   <style>
+    .official-site {
+  max-width: 1200px;
+  margin: 30px auto 50px;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.official-site-box {
+  padding: 30px 24px;
+  background: #ffffff;
+  border: 1px solid #eadcdd;
+  border-radius: 15px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.official-site-box h2 {
+  margin-bottom: 10px;
+  color: #222222;
+  font-size: 22px;
+}
+
+.official-site-box p {
+  margin-bottom: 20px;
+  color: #666666;
+  line-height: 1.7;
+}
+
+.official-site-button {
+  display: inline-block;
+  min-width: 240px;
+  padding: 14px 24px;
+  background: #b5121b;
+  color: #ffffff;
+  border-radius: 9px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.official-site-button:hover {
+  background: #940e16;
+}
+
+.official-site-button:focus-visible {
+  outline: 3px solid #b5121b;
+  outline-offset: 4px;
+}
+
+@media (max-width: 480px) {
+  .official-site-button {
+    width: 100%;
+    min-width: 0;
+  }
+}
     * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
     body { background: #f5f5f5; }
     .header { background: #b5121b; color: white; text-align: center; padding: 50px 20px; }
@@ -106,6 +159,25 @@
       <label for="copy-address">자동 복사가 차단되었습니다. 아래 주소를 선택해 직접 복사해 주세요.</label>
       <input id="copy-address" type="text" readonly>
     </div>
+    <section class="official-site">
+  <div class="official-site-box">
+    <h2>LX판토스 공식 홈페이지</h2>
+
+    <p>
+      LX판토스의 다양한 물류 서비스와 기업 정보를
+      공식 홈페이지에서 확인해 주세요.
+    </p>
+
+    <a
+      href="https://www.lxpantos.com/kr/main.do"
+      class="official-site-button"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      공식 홈페이지 바로가기
+    </a>
+  </div>
+</section>
   </main>
   <script>
     (function () {
